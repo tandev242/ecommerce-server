@@ -1,0 +1,220 @@
+[
+    {
+        "name": "Thời Trang Nam",
+        "parentCategoryImage": "https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn",
+        "children": [
+            {
+                "name": "Quần jogger",
+                "categoryImage": "https://cf.shopee.vn/file/ab3d7df000fc8bcb002da2725f04d1fb_tn",
+                "parentId": "Thời Trang Nam"
+            },
+            {
+                "name": "Áo Hoodie Nỉ bông TRƠN màu Xám/Xám xanh UNISEX/Nam nữ unisex/ HOODIE TRƠN",
+                "categoryImage": "https://cf.shopee.vn/file/6d67f18b6dd6be0a116a5f841f891375_tn",
+                "parentId": "Thời Trang Nam"
+            },
+            {
+                "name": "Quần short cartoon THE 1992 nhiều họa tiết",
+                "categoryImage": "https://cf.shopee.vn/file/0bae622285d5de87f3e281eb1a28df81_tn",
+                "parentId": "Thời Trang Nam"
+            },
+            {
+                "name": "Áo khoác blazer Nam Form Rộng MrHero dài tay vest dáng dài unisex màu đen nâu phong cách Hàn Quốc BZ01 M.RO",
+                "categoryImage": "https://cf.shopee.vn/file/6c0c245e3a995ec74cb869ad0776f42d_tn",
+                "parentId": "Thời Trang Nam"
+            },
+            {
+                "name": "Quần âu nam hàn quốc dáng baggy suông đen, kem vải dày dặn co giãn tốt thương hiệu JBAGY - JA0101",
+                "categoryImage": "https://cf.shopee.vn/file/f65fbbd3f19939d3cbac5c5c5e92f202_tn",
+                "parentId": "Thời Trang Nam"
+            }
+        ]
+    },
+    {
+        "name": "Thời Trang Nữ",
+        "parentCategoryImage": "https://cf.shopee.vn/file/75ea42f9eca124e9cb3cde744c060e4d_tn",
+        "children": [
+            {
+                "name": "Chân váy tennis ngắn xếp ly thời trang nữ",
+                "categoryImage": "https://cf.shopee.vn/file/d7a52ae26880d2a8262627a6053d5958_tn",
+                "parentId": "Thời Trang Nữ"
+            },
+            {
+                "name": "Áo sơ mi nữ trắng đi học tay dài bo nhúm cổ bẻ basic form rộng vừa - Sơ mi đi học sinh nữ trắng tay dài",
+                "categoryImage": "https://cf.shopee.vn/file/b4f491bd72d9b7719f67acb23fe3b847_tn",
+                "parentId": "Thời Trang Nữ"
+            },
+            {
+                "name": "Áo Khoác Cardigan Len Mỏng Cho Nữ Phong Cách Ulzzang Phù Hợp Đi Đà Lạt, Dạo Biển, Labibi",
+                "categoryImage": "https://cf.shopee.vn/file/e4e184670e27fffdc05df9e5c1bf0087_tn",
+                "parentId": "Thời Trang Nữ"
+            },
+            {
+                "name": "Chân váy tennis ngắn xếp ly thời trang nữ",
+                "categoryImage": "https://cf.shopee.vn/file/d7a52ae26880d2a8262627a6053d5958_tn",
+                "parentId": "Thời Trang Nữ"
+            },
+            {
+                "name": "Áo sơ mi nữ trắng đi học tay dài bo nhúm cổ bẻ basic form rộng vừa - Sơ mi đi học sinh nữ trắng tay dài",
+                "categoryImage": "https://cf.shopee.vn/file/b4f491bd72d9b7719f67acb23fe3b847_tn",
+                "parentId": "Thời Trang Nữ"
+            }
+        ]
+    },
+    {
+        "name": "Điện Thoại & Phụ Kiện",
+        "parentCategoryImage": "https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn",
+        "children": [
+            {
+                "name": "Kính cường lực iphone 2.5D trong suốt 6/6plus/6s/6splus/7/7plus/8/8plus/x/xs/11/12/13/pro/max/promax/Shin Case/Ốp lưng",
+                "categoryImage": "https://cf.shopee.vn/file/543bc74be15a98e21540d3ba6af6c740_tn",
+                "parentId": "Điện Thoại & Phụ Kiện"
+            },
+            {
+                "name": "Giá Đỡ Chống Lưng Cho Phụ Kiện pop Điện Thoại Tai Nghe Bluetooth  Pin Dự Phòng Shin Case",
+                "categoryImage": "https://cf.shopee.vn/file/bf859d428e5f90ac5821fe2f6bef6e20_tn",
+                "parentId": "Điện Thoại & Phụ Kiện"
+            },
+            {
+                "name": "Điện thoại Samsung Galaxy Z Fold3 5G (12GB/512GB) - Hàng Chính Hãng",
+                "categoryImage": "https://cf.shopee.vn/file/954ff2db66d5c26d23a65ac3d97b8d11_tn",
+                "parentId": "Điện Thoại & Phụ Kiện"
+            },
+            {
+                "name": "Điện thoại Samsung Galaxy S22 Ultra S908E (12G+512G)",
+                "categoryImage": "https://cf.shopee.vn/file/fdc994f7a29ca1aaa4b2db71c3783959_tn",
+                "parentId": "Điện Thoại & Phụ Kiện"
+            },
+            {
+                "name": "Kính cường lực iphone 2.5D trong suốt 6/6plus/6s/6splus/7/7plus/8/8plus/x/xs/11/12/13/pro/max/promax/Shin Case/Ốp lưng",
+                "categoryImage": "https://cf.shopee.vn/file/543bc74be15a98e21540d3ba6af6c740_tn",
+                "parentId": "Điện Thoại & Phụ Kiện"
+            }
+        ]
+    },
+    {
+        "name": "Thiết Bị Điện Tử",
+        "parentCategoryImage": "https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn",
+        "children": [
+            {
+                "name": "Tai nghe bluetooth F9 TWS 5.0 bản Quốc tế không dây cảm ứng chống nước IPX5, chống ồn tích hợp sạc dự phòng 2500mAh",
+                "categoryImage": "https://cf.shopee.vn/file/158365e2f2352a6688d0fc5f73349551_tn",
+                "parentId": "Thiết Bị Điện Tử"
+            },
+            {
+                "name": "Loa Bluetooth Không Dây Cầm Tay Charge 3 Mini Nghe Nhạc Hay, Hỗ Trợ Cắm Usb Thẻ Nhớ Tf Nhỏ Gọn Giá Rẻ",
+                "categoryImage": "https://cf.shopee.vn/file/72eafd4578c983f8b711fe9ce6b55488_tn",
+                "parentId": "Thiết Bị Điện Tử"
+            },
+            {
+                "name": "Tai nghe nhét tai TOPK F20 chống ồn có micro tích hợp điều khiển âm lượng",
+                "categoryImage": "https://cf.shopee.vn/file/4fcfecf3e19bbcd2cd81434a4540a258_tn",
+                "parentId": "Thiết Bị Điện Tử"
+            },
+            {
+                "name": "Đồng Hồ Báo Thức Điện Tử Để Bàn Màn Hình LCD Đa Chức Năng: Thời Gian, Lịch, Báo Thức, Nhiệt Độ ( Mẫu mới 2019)",
+                "categoryImage": "https://cf.shopee.vn/file/efcc09e8c9af3fad45cdd7256b85fd0c_tn",
+                "parentId": "Thiết Bị Điện Tử"
+            },
+            {
+                "name": "Loa Bluetooth Không Dây Cầm Tay Charge 3 Mini Nghe Nhạc Hay, Hỗ Trợ Cắm Usb Thẻ Nhớ Tf Nhỏ Gọn Giá Rẻ",
+                "categoryImage": "https://cf.shopee.vn/file/72eafd4578c983f8b711fe9ce6b55488_tn",
+                "parentId": "Thiết Bị Điện Tử"
+            }
+        ]
+    },
+    {
+        "name": "Máy Tính & Laptop",
+        "parentCategoryImage": "https://cf.shopee.vn/file/c3f3edfaa9f6dafc4825b77d8449999d_tn",
+        "children": [
+            {
+                "name": "Chuột Không Dây Màu Hồng / Đen/ Xám/ Xanh ngọc Forter V182 - Hàng Chính Hãng",
+                "categoryImage": "https://cf.shopee.vn/file/b03d0a92da9550674de0ac7fa6dd4765_tn",
+                "parentId": "Máy Tính & Laptop"
+            },
+            {
+                "name": "Bàn phím không dây Bluetooth Logitech K380 - giảm ồn, gọn nhẹ, đa thiết bị, Mac/ PC",
+                "categoryImage": "https://cf.shopee.vn/file/85c4e9488ad2f9d2452df12053512479_tn",
+                "parentId": "Máy Tính & Laptop"
+            },
+            {
+                "name": "Bàn Phím Cơ Máy Tính Crack K2 PRO Led RGB 10 Chế Độ Khác Nhau, Chơi Game Dùng Văn Phòng Cực Đã",
+                "categoryImage": "https://cf.shopee.vn/file/f36657ce98ed757e4587d1b7fcb4c495_tn",
+                "parentId": "Máy Tính & Laptop"
+            },
+            {
+                "name": "Chuột Không Dây Màu Hồng / Đen/ Xám/ Xanh ngọc Forter V182 - Hàng Chính Hãng",
+                "categoryImage": "https://cf.shopee.vn/file/b03d0a92da9550674de0ac7fa6dd4765_tn",
+                "parentId": "Máy Tính & Laptop"
+            },
+            {
+                "name": "Quạt Tản Nhiệt, Fan Led RGB Coolmoon Y1 - Đồng Bộ Hub Coolmoon",
+                "categoryImage": "https://cf.shopee.vn/file/8580bfbf657853bd08b769e83ffe2c2e_tn",
+                "parentId": "Máy Tính & Laptop"
+            }
+        ]
+    },
+    {
+        "name": "Đồng Hồ",
+        "parentCategoryImage": "https://cf.shopee.vn/file/86c294aae72ca1db5f541790f7796260_tn",
+        "children": [
+            {
+                "name": "Đồng hồ điện tử nam nữ SPPORS S019 thể thao, mặt chữ nhật cá tính",
+                "categoryImage": "https://cf.shopee.vn/file/8e3cd278337163cf38537c3e9634a45f_tn",
+                "parentId": "Đồng Hồ"
+            },
+            {
+                "name": "Đồng hồ điện tử nam nữ WR dây hơp kim W172",
+                "categoryImage": "https://cf.shopee.vn/file/0184b72febedf16f4ee056d9e443e21b_tn",
+                "parentId": "Đồng Hồ"
+            },
+            {
+                "name": "Đồng hồ trẻ em dây nhựa Synoke 99268",
+                "categoryImage": "https://cf.shopee.vn/file/844ccd786dff14d655b7677dec968eee_tn",
+                "parentId": "Đồng Hồ"
+            },
+            {
+                "name": "Đồng hồ điện tử nam nữ Crnaira c562 đầy đủ các chức năng chất liệu nhựa dẻo silicon",
+                "categoryImage": "https://cf.shopee.vn/file/ef8df01edb6581cbb37d92b4e3d3fc41_tn",
+                "parentId": "Đồng Hồ"
+            },
+            {
+                "name": "Đồng hồ điện tử nam nữ WR dây hơp kim W172",
+                "categoryImage": "https://cf.shopee.vn/file/0184b72febedf16f4ee056d9e443e21b_tn",
+                "parentId": "Đồng Hồ"
+            }
+        ]
+    },
+    {
+        "name": "Nhà Cửa & Đời Sống",
+        "parentCategoryImage": "https://cf.shopee.vn/file/24b194a695ea59d384768b7b471d563f_tn",
+        "children":
+        [
+            {
+                "name": "Cân tiểu ly điện tử nhà bếp mini định lượng 1g - 10kg, Cân tiểu ly làm bánh độ chính xác cao kèm 2 viên pin AAA",
+                "categoryImage": "https://cf.shopee.vn/file/698a8ac5387d2e46e7549db79b125dac_tn",
+                "parentId": "Nhà Cửa & Đời Sống"
+            },
+            {
+                "name": "Túi bọc quần áo chống bụi bẩn bằng nhựa trong suốt",
+                "categoryImage": "https://cf.shopee.vn/file/d1f5720735e03f4ab6e577b7809076e4_tn",
+                "parentId": "Nhà Cửa & Đời Sống"
+            },
+            {
+                "name": "Khay đựng mỹ phẩm để bàn siêu rẻ loại 1 ngăn kéo",
+                "categoryImage": "https://cf.shopee.vn/file/9a50c2294d31c4836413d668175607b7_tn",
+                "parentId": "Nhà Cửa & Đời Sống"
+            },
+            {
+                "name": "Cân tiểu ly điện tử nhà bếp mini định lượng 1g - 10kg, Cân tiểu ly làm bánh độ chính xác cao kèm 2 viên pin AAA",
+                "categoryImage": "https://cf.shopee.vn/file/698a8ac5387d2e46e7549db79b125dac_tn",
+                "parentId": "Nhà Cửa & Đời Sống"
+            },
+            {
+                "name": "Tấm Nhựa Lót Sàn 3T-Eco - Trang Trí Ban Công, Chống Trơn Nhà Tắm, Bể Bơi, Sân Vườn, Sân Thượng",
+                "categoryImage": "https://cf.shopee.vn/file/14b00930909395bd01ce2357685e39cd_tn",
+                "parentId": "Nhà Cửa & Đời Sống"
+            }
+        ]
+    }
+]

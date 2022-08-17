@@ -20,9 +20,9 @@ const orderSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Product",
         },
-        size: {
+        variant: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Size"
+            ref: "Variant"
         },
         price: {
             type: Number,

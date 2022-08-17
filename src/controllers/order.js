@@ -1,7 +1,7 @@
 const { Order, DeliveryInfo, Cart } = require("../models")
 
 exports.addOrder = (req, res) => {
-    const { items, addressId, totalAmount, paymentStatus, paymentType } = req.body;
+    const { items, address, totalAmount, paymentStatus, paymentType } = req.body;
     const orderStatus = [
         {
             type: 'ordered',
@@ -23,16 +23,14 @@ exports.addOrder = (req, res) => {
     ]
 
     items.forEach((item) => {
-        const productId = item.productId;
-        const sizeId = item.sizeId;
-        if (productId) {
+        if (product) {
             Cart.updateOne(
                 { user: req.user._id },
                 {
                     $pull: {
                         cartItems: {
-                            product: productId,
-                            size: sizeId
+                            product: item.product,
+                            size: item.size
                         },
                     },
                 }
@@ -45,7 +43,7 @@ exports.addOrder = (req, res) => {
 
     const order = new Order({
         user: req.user._id,
-        addressId,
+        address,
         totalAmount,
         items,
         paymentStatus,
@@ -63,8 +61,8 @@ exports.addOrder = (req, res) => {
 exports.getOrder = (req, res) => {
     const { orderId } = req.body;
     Order.findOne({ _id: orderId })
-        .populate("items.productId", "_id name slug price discountPercent productPictures")
-        .populate("items.sizeId", "_id size description")
+        .populate("items.product", "_id name slug price discountPercent productPictures")
+        .populate("items.variant")
         .lean()
         .exec((error, order) => {
             if (error) return res.status(400).json({ error });
@@ -72,7 +70,7 @@ exports.getOrder = (req, res) => {
                 DeliveryInfo.findOne({ user: req.user._id })
                     .exec((error, dI) => {
                         if (error) return res.status(400).json({ error });
-                        order.address = dI.address.find(address => address._id == order.addressId);
+                        order.address = dI.address.find(address => address._id == order.address);
                         res.status(200).json({ order });
                     })
             }
@@ -116,7 +114,7 @@ exports.updateStatus = (req, res) => {
 exports.getAllOrders = async (req, res) => {
     try {
         const orders = await Order.find({ paymentStatus: { "$ne": "cancelled" } })
-            .populate("items.productId", "_id name slug price discountPercent productPictures")
+            .populate("items.product", "_id name slug price discountPercent productPictures")
             .sort({ createdAt: -1 })
             .exec();
         res.status(200).json({ orders });
@@ -128,8 +126,8 @@ exports.getAllOrders = async (req, res) => {
 
 exports.getOrdersByUser = (req, res) => {
     Order.find({ user: req.user._id })
-        .populate("items.productId", "_id name slug price discountPercent productPictures")
-        .populate("items.sizeId", "_id size description")
+        .populate("items.product", "_id name slug price discountPercent productPictures")
+        .populate("items.variant")
         .sort({ createdAt: -1 })
         .exec((error, orders) => {
             if (error) return res.status(400).json({ error });

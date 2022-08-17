@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-sizeProductSchema = require('../models/sizeProduct').schema;
+variantSchema = require('../models/variant').schema;
 
 const productSchema = new mongoose.Schema({
     name: {
@@ -29,7 +29,7 @@ const productSchema = new mongoose.Schema({
         trim: true
     },
     productPictures: [
-        { img: { type: String } }
+        { type: String }
     ],
     reviews: [
         {
@@ -43,8 +43,7 @@ const productSchema = new mongoose.Schema({
             createdAt: { type: Date, default: Date.now }
         },
     ],
-    sizes: [sizeProductSchema],
-    brand: { type: mongoose.Schema.Types.ObjectId, ref: 'Brand', required: true },
+    variants: [variantSchema],
     category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true },
     isDisabled: false
 }, { timestamps: true });

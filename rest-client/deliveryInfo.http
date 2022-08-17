@@ -1,21 +1,19 @@
 POST http://localhost:5000/api/deliveryInfo/add
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZhMzY1NWU4YTI4ZjRhYTgwYWQ2ODkiLCJlbWFpbCI6InRhbjEyMjIyMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDU2NzM4OCwiZXhwIjoxNjYzMTU5Mzg4fQ.hOj60XMzR4r7zJMfbHyEQfrspMiqI5ivrt47VhAyL_E
 
 {
     "address": {
-        "_id": "64565421364",
-        "name": "Nguoi nao do",
-        "phoneNumber": "092919213",
-        "address": "Thu Duc, Kon Tum",
-        "isDefault": true
+        "name": "Nguoi nao do 1",
+        "phoneNumber": "09291921312",
+        "address": "Thu Duc, Kon Tu 1212m 33"
     }
 }
 
 ###################################################
 GET  http://localhost:5000/api/deliveryInfo/get
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZhMzY1NWU4YTI4ZjRhYTgwYWQ2ODkiLCJlbWFpbCI6InRhbjEyMjIyMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDU2NzM4OCwiZXhwIjoxNjYzMTU5Mzg4fQ.hOj60XMzR4r7zJMfbHyEQfrspMiqI5ivrt47VhAyL_E
 
 {
 }
@@ -23,17 +21,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExY
 ###################################################
 POST  http://localhost:5000/api/deliveryInfo/delete
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZhMzY1NWU4YTI4ZjRhYTgwYWQ2ODkiLCJlbWFpbCI6InRhbjEyMjIyMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDU2NzM4OCwiZXhwIjoxNjYzMTU5Mzg4fQ.hOj60XMzR4r7zJMfbHyEQfrspMiqI5ivrt47VhAyL_E
 
 {
-    "addressId": "312321321312"
+    "addressId": "62fa467de8a28f4aa80ad6ba"
 }
 
 ###################################################
 POST  http://localhost:5000/api/deliveryInfo/setDefaultDeliveryInfo
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZhMzY1NWU4YTI4ZjRhYTgwYWQ2ODkiLCJlbWFpbCI6InRhbjEyMjIyMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDU2NzM4OCwiZXhwIjoxNjYzMTU5Mzg4fQ.hOj60XMzR4r7zJMfbHyEQfrspMiqI5ivrt47VhAyL_E
 
 {
-    "addressId": "312321321312"
+    "addressId": "62fa486139515f813c3213b0"
 }

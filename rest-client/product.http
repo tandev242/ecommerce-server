@@ -7,24 +7,31 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExY
     "price": "",
     "description": "",
     "category": "",
-    "brand": "",
     "discountPercent": "",
-    "sizes": "",
+    "variants": "",
     "productPicture": "day la anh"
 }
 
 ############################################
-POST http://localhost:5000/api/product/add
-Content-Type: multipart/form-data
+POST http://localhost:5000/api/product/getProducts
+Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
 
 {
-    "name": "", 
-    "price": "",
-    "description": "",
-    "category": "",
-    "brand": "",
-    "discountPercent": "",
-    "sizes": "",
-    "productPicture": "day la anh"
+}
+
+############################################
+GET http://localhost:5000/api/product/Thoi-Trang-Nu-Kd1bxLPx6/category
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+
+{
+}
+
+############################################
+GET http://localhost:5000/api/product/VAY-DAM-HAI-DAY-PmjWCVe-M
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+
+{
 }

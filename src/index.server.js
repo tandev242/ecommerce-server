@@ -32,4 +32,3 @@ app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
 })
 
-// mongodb+srv://nhom2-tgdd:daylapwd@nhom-2.mi87w9e.mongodb.net/tgdd-db?retryWrites=true&w=majority

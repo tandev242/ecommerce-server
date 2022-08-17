@@ -23,7 +23,7 @@ exports.addDeliveryInfo = async (req, res) => {
             )
         }
         if (updatedAddress) {
-            res.status(201).json({ address: updatedAddress })
+            res.status(201).json({ deliveryInfo: updatedAddress })
         } else {
             res.status(400).json({ error: "something went wrong" })
         }

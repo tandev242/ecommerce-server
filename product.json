@@ -1,0 +1,67 @@
+{
+    "items": [
+        {
+            "variants": [
+                {
+                    "name": "red"
+                },
+                {
+                    "name": "pink"
+                },
+                {
+                    "name": "black"
+                },
+                {
+                    "name": "white"
+                }
+            ],
+            "description": "Hàng chất lượng Việt Nam",
+            "productPictures": [
+                "https://cf.shopee.vn/file/efaefbef9c07d308ead92f695a674d3b",
+                "https://cf.shopee.vn/file/f52040a9b4d58db84e57c51d58606c4a_tn",
+                "https://cf.shopee.vn/file/2dd0e62db712914635bc4f6676fa393c_tn",
+                "https://cf.shopee.vn/file/da81c21bea1cb240310ff5d0806d02f1_tn"
+            ],
+            "category": "62fcb7df6bcc010f308c8bfe",
+            "price": 200200,
+            "discountPercent": 20,
+            "name": "VÁY DẦM HAI DÂY"
+        },
+        {
+            "variants": [
+                {
+                    "name": "red"
+                },
+                {
+                    "name": "pink"
+                },
+                {
+                    "name": "black"
+                },
+                {
+                    "name": "white"
+                },
+                {
+                    "name": "40w"
+                },
+                {
+                    "name": "160w"
+                },
+                {
+                    "name": "80w"
+                }
+            ],
+            "description": "Hàng chất lượng Việt Nam",
+            "productPictures": [
+                "https://cf.shopee.vn/file/efaefbef9c07d308ead92f695a674d3b",
+                "https://cf.shopee.vn/file/f52040a9b4d58db84e57c51d58606c4a_tn",
+                "https://cf.shopee.vn/file/2dd0e62db712914635bc4f6676fa393c_tn",
+                "https://cf.shopee.vn/file/da81c21bea1cb240310ff5d0806d02f1_tn"
+            ],
+            "category": "62fcb7df6bcc010f308c8bfe",
+            "price": 200200,
+            "discountPercent": 20,
+            "name": "VÁY DẦM HAI DÂY"
+        }
+    ]
+}

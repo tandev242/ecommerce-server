@@ -5,7 +5,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExY
 {
     "cartItem": {
         "product": "64565421364",
-        "size": "21321312",
+        "varient": "21321312",
         "quantity": 1
     }
 }
@@ -26,6 +26,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExY
 {
     "cartItem": {
         "product": "64565421364",
-        "size": "21321312"
+        "varient": "21321312"
     } 
 }

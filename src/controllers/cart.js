@@ -7,11 +7,11 @@ exports.addToCart = (req, res) => {
             if (error) return res.status(400).json({ error })
             if (cart) {
                 const product = cartItem.product;
-                const size = cartItem.size;
-                const item = cart.cartItems.find(c => c.product == product && c.size == size);
+                const variant = cartItem.variant;
+                const item = cart.cartItems.find(c => c.product == product && c.variant == variant);
                 let condition, update;
                 if (item) {
-                    condition = { user: req.user._id, "cartItems.product": product, "cartItems.size": size };
+                    condition = { user: req.user._id, "cartItems.product": product, "cartItems.variant": variant };
                     update = {
                         $set: {
                             "cartItems.$": cartItem
@@ -53,7 +53,7 @@ exports.addToCart = (req, res) => {
 exports.getCartItems = (req, res) => {
     Cart.findOne({ user: req.user._id })
         .populate("cartItems.product", "_id name slug price discountPercent productPictures")
-        .populate("cartItems.size", "_id size")
+        .populate("cartItems.variant")
         .exec((error, cart) => {
             if (error) return res.status(400).json({ error })
             if (cart) {
@@ -61,7 +61,7 @@ exports.getCartItems = (req, res) => {
                 cart.cartItems.forEach((item) => {
                     cartItems.push({
                         product: item.product,
-                        size: item.size,
+                        variant: item.variant,
                         quantity: item.quantity
                     })
                 })
@@ -79,7 +79,7 @@ exports.removeCartItem = (req, res) => {
                 $pull: {
                     cartItems: {
                         product: cartItem.product,
-                        size: cartItem.size
+                        variant: cartItem.variant
                     }
                 }
             }).exec((error, result) => {
