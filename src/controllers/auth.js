@@ -7,9 +7,9 @@ const client = new OAuth2Client(client_id)
 const jwt = require("jsonwebtoken")
 
 const generateJwtToken = (_id, email, role) => {
-  return jwt.sign({ _id, email, role }, process.env.JWT_SECRET, {
-    expiresIn: "30d",
-  });
+    return jwt.sign({ _id, email, role }, process.env.JWT_SECRET, {
+        expiresIn: "30d",
+    });
 };
 
 exports.signup = async (req, res) => {
@@ -40,14 +40,14 @@ exports.signup = async (req, res) => {
 
 exports.signin = async (req, res) => {
     try {
-        const existingUser = await User.findOne({ email: req.body.email, isDisabled: { $ne: true }})
+        const existingUser = await User.findOne({ email: req.body.email, isDisabled: { $ne: true } })
         if (existingUser) {
             const isPasswordMatch = await existingUser.authenticate(req.body.password)
             if (isPasswordMatch) {
-                const { _id, name, email, profilePicture, role } = existingUser
+                const { _id, name, email, phoneNumber, profilePicture, role } = existingUser
                 const token = await generateJwtToken(_id, email, role)
                 // response token and user info
-                res.status(200).json({ token, user: { _id, name, email, profilePicture, role } })
+                res.status(200).json({ token, user: { _id, name, email, profilePicture, phoneNumber, role } })
             } else {
                 res.status(400).json({ error: "Password incorrect" })
             }
@@ -67,7 +67,7 @@ exports.signinWithGoogle = async (req, res) => {
             audience: client_id,
         })
         const { email, picture } = ticket.getPayload()
-        const existingUser = await User.findOne({ email , isDisabled: { $ne: true }})
+        const existingUser = await User.findOne({ email, isDisabled: { $ne: true } })
         if (existingUser) {
             const { _id, name, email, profilePicture, role } = existingUser
             const token = await generateJwtToken(_id, email, role)
@@ -92,9 +92,9 @@ exports.signinWithGoogle = async (req, res) => {
 
 exports.isUserLoggedIn = async (req, res) => {
     try {
-        const userObj = await User.findOne({ _id: req.user._id, isDisabled: { $ne: true }})
-        const { _id, name, email, role, profilePicture } = userObj
-        const user = { _id, name, email, role, profilePicture }
+        const userObj = await User.findOne({ _id: req.user._id, isDisabled: { $ne: true } })
+        const { _id, name, email, role, phoneNumber, profilePicture } = userObj
+        const user = { _id, name, email, role, phoneNumber, profilePicture }
         res.status(200).json({ user })
     } catch (error) {
         res.status(400).json({ error })

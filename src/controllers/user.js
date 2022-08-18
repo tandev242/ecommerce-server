@@ -29,8 +29,8 @@ exports.updateUser = async (req, res) => {
 }
 
 exports.updateUserInfo = async (req, res) => {
-    const { otp, name, password } = req.body
-    const payload = { name }
+    const { otp, name, phoneNumber, password } = req.body
+    const payload = { name, phoneNumber }
     try {
         if (password) {
             const otpObj = await Otp.findOneAndDelete({ user: req.user._id, generatedOtp: otp })

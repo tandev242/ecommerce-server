@@ -71,10 +71,11 @@ exports.setDefaultDeliveryInfo = (req, res) => {
                         $set: {
                             "address.$.isDefault": true
                         }
-                    }).exec((error, result) => {
+                    },
+                    { new: true, upsert: true }).exec((error, deliveryInfo) => {
                         if (error) return res.status(400).json({ error })
-                        if (result) {
-                            res.status(201).json({ result: "Set Default successful" })
+                        if (deliveryInfo) {
+                            res.status(201).json({ deliveryInfo })
                         } else {
                             res.status(400).json({ error: "something went wrong" })
                         }

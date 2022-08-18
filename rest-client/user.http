@@ -1,7 +1,7 @@
 # update by Admin
 POST http://localhost:5000/api/user/update
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZlNGZjNmU4OGQwYzY4NGMxOTdkNzAiLCJlbWFpbCI6InN1cGVyanVuaW9yMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDgzMzczNSwiZXhwIjoxNjYzNDI1NzM1fQ.5Y15TldFvyqQ-DWdJ4Pq_sMjZShEkcDVEbdA2njl0Xs
 
 {
     "user": "3123213213",
@@ -12,7 +12,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExY
 ###################################################
 POST  http://localhost:5000/api/user/updateUserInfo
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZlNGZjNmU4OGQwYzY4NGMxOTdkNzAiLCJlbWFpbCI6InN1cGVyanVuaW9yMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDgzMzczNSwiZXhwIjoxNjYzNDI1NzM1fQ.5Y15TldFvyqQ-DWdJ4Pq_sMjZShEkcDVEbdA2njl0Xs
 
 {
     "name": "Tan 2k2",
@@ -24,7 +24,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExY
 ###################################################
 POST  http://localhost:5000/api/user/delete
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTU1NWExYWEwYWM4MjEzNDg2NTYxMWEiLCJlbWFpbCI6InN1cGVyanVuaW9yMjQyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU5MzQ2MDE0LCJleHAiOjE2NjE5MzgwMTR9.UMqoGxnOjPA8i73YC4ONmsrJ-Z0yUXfyxpDBhZmJc9A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZlNGZjNmU4OGQwYzY4NGMxOTdkNzAiLCJlbWFpbCI6InN1cGVyanVuaW9yMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDgzMzczNSwiZXhwIjoxNjYzNDI1NzM1fQ.5Y15TldFvyqQ-DWdJ4Pq_sMjZShEkcDVEbdA2njl0Xs
 
 {
     "_id": "32432432324223"

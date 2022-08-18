@@ -25,11 +25,12 @@ exports.addToCart = (req, res) => {
                         }
                     }
                 }
-                Cart.findOneAndUpdate(condition, updateData, { upsert: true })
+                Cart.findOneAndUpdate(condition, update,
+                    { new: true, upsert: true })
                     .exec((error, cart) => {
                         if (error) return res.status(400).json({ error })
                         if (cart) {
-                            res.status(201).json({ message: "add to cart successfully" });
+                            res.status(201).json({ cart });
                         }
                     })
             } else {
@@ -40,7 +41,7 @@ exports.addToCart = (req, res) => {
                 cart.save((error, cart) => {
                     if (error) return res.status(400).json({ error });
                     if (cart) {
-                        res.status(201).json({ message: "add to cart successfully" });
+                        res.status(201).json({ cart });
                     }
                 })
             }
@@ -52,20 +53,11 @@ exports.addToCart = (req, res) => {
 
 exports.getCartItems = (req, res) => {
     Cart.findOne({ user: req.user._id })
-        .populate("cartItems.product", "_id name slug price discountPercent productPictures")
-        .populate("cartItems.variant")
+        .populate("cartItems.product")
         .exec((error, cart) => {
             if (error) return res.status(400).json({ error })
             if (cart) {
-                let cartItems = [];
-                cart.cartItems.forEach((item) => {
-                    cartItems.push({
-                        product: item.product,
-                        variant: item.variant,
-                        quantity: item.quantity
-                    })
-                })
-                return res.status(200).json({ cartItems });
+                return res.status(200).json({ cart });
             }
             res.status(400).json({ error: "Something went wrong" });
         })
@@ -74,7 +66,7 @@ exports.getCartItems = (req, res) => {
 exports.removeCartItem = (req, res) => {
     const { cartItem } = req.body;
     if (cartItem) {
-        Cart.updateOne({ user: req.user._id },
+        Cart.findOneAndUpdate({ user: req.user._id },
             {
                 $pull: {
                     cartItems: {
@@ -82,10 +74,10 @@ exports.removeCartItem = (req, res) => {
                         variant: cartItem.variant
                     }
                 }
-            }).exec((error, result) => {
+            }).exec((error, cart) => {
                 if (error) return res.status(400).json({ error });
-                if (result) {
-                    return res.status(202).json({ result });
+                if (cart) {
+                    return res.status(202).json({ message: "remove cartItem successfully"});
                 }
                 return res.status(400).json({ error: "something went wrong" });
             })

@@ -16,6 +16,12 @@ const userSchema = new mongoose.Schema({
         unique: true,
         lowercase: true,
     },
+    phoneNumber: {
+        type: String,
+        trim: true,
+        unique: true,
+        lowercase: true,
+    },
     role: {
         type: String,
         enum: ["user", "admin"],
