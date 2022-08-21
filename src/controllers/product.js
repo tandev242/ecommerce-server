@@ -47,10 +47,10 @@ exports.addProducts = async (req, res) => {
             discountPercent,
             category
         })
-        try{
+        try {
             await product.save()
-            count ++;
-        }catch(error) {
+            count++;
+        } catch (error) {
 
         }
     }
@@ -103,7 +103,6 @@ exports.getProductsByCategorySlug = (req, res) => {
     const { slug } = req.params
     if (slug === "all") {
         Product.find({ isDisabled: { $ne: true } })
-            .populate({ path: "category", select: "_id name categoryImage" })
             .limit(100)
             .exec((error, products) => {
                 if (error) return res.status(400).json({ error })
@@ -128,7 +127,6 @@ exports.getProductsByCategorySlug = (req, res) => {
                             categoriesArr.push(...categories)
                         }
                         Product.find({ category: { $in: categoriesArr } })
-                            .populate({ path: "category", select: "_id name categoryImage" })
                             .limit(100)
                             .exec((error, products) => {
                                 if (error) return res.status(400).json({ error })
@@ -264,11 +262,12 @@ exports.addProductReview = (req, res) => {
                 ],
 
             },
-        }
-    ).exec((error, result) => {
+        },
+        { new: true, upsert: true }
+    ).exec((error, product) => {
         if (error) return res.status(400).json({ error })
-        if (result) {
-            res.status(202).json({ message: "update successfully" })
+        if (product) {
+            res.status(202).json({ product })
         } else {
             res.status(400).json({ error: "something went wrong" })
         }

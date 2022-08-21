@@ -23,22 +23,20 @@ exports.addOrder = (req, res) => {
     ]
 
     items.forEach((item) => {
-        if (product) {
-            Cart.updateOne(
-                { user: req.user._id },
-                {
-                    $pull: {
-                        cartItems: {
-                            product: item.product,
-                            size: item.size
-                        },
+        Cart.updateOne(
+            { user: req.user._id },
+            {
+                $pull: {
+                    cartItems: {
+                        product: item.product,
+                        variant: item.variant
                     },
-                }
-            ).exec((error, result) => {
-                if (error)
-                    return res.status(400).json({ error });
-            });
-        }
+                },
+            }
+        ).exec((error, result) => {
+            if (error)
+                return res.status(400).json({ error });
+        });
     })
 
     const order = new Order({
@@ -50,10 +48,11 @@ exports.addOrder = (req, res) => {
         paymentType,
         orderStatus
     })
+
     order.save((error, order) => {
         if (error) return res.status(400).json({ error });
         if (order) {
-            res.status(201).json({ order });
+            res.status(201).json({ message: "Add order successfully" });
         }
     });
 }
@@ -61,8 +60,7 @@ exports.addOrder = (req, res) => {
 exports.getOrder = (req, res) => {
     const { orderId } = req.body;
     Order.findOne({ _id: orderId })
-        .populate("items.product", "_id name slug price discountPercent productPictures")
-        .populate("items.variant")
+        .populate("items.product")
         .lean()
         .exec((error, order) => {
             if (error) return res.status(400).json({ error });
@@ -88,7 +86,8 @@ exports.updateStatus = (req, res) => {
                     ],
 
                 },
-            }
+            },
+            { new: true, upsert: true }
         ).exec((error, order) => {
             if (error) return res.status(400).json({ error });
             if (order) {
@@ -98,15 +97,16 @@ exports.updateStatus = (req, res) => {
             }
         });
     } else {
-        Order.findOneAndUpdate({ _id: orderId }, { paymentStatus: type })
-            .exec((error, order) => {
-                if (error) return res.status(400).json({ error });
-                if (order) {
-                    res.status(202).json({ order });
-                } else {
-                    res.status(400).json({ error: "something went wrong" });
-                }
-            });
+        Order.findOneAndUpdate({ _id: orderId }, { paymentStatus: type },
+            { new: true, upsert: true }
+            ).exec((error, order) => {
+                    if (error) return res.status(400).json({ error });
+                    if (order) {
+                        res.status(202).json({ order });
+                    } else {
+                        res.status(400).json({ error: "something went wrong" });
+                    }
+                });
     }
 }
 
@@ -114,9 +114,8 @@ exports.updateStatus = (req, res) => {
 exports.getAllOrders = async (req, res) => {
     try {
         const orders = await Order.find({ paymentStatus: { "$ne": "cancelled" } })
-            .populate("items.product", "_id name slug price discountPercent productPictures")
+            .populate("items.product")
             .sort({ createdAt: -1 })
-            .exec();
         res.status(200).json({ orders });
     } catch (error) {
         res.status(400).json({ error });
@@ -126,8 +125,7 @@ exports.getAllOrders = async (req, res) => {
 
 exports.getOrdersByUser = (req, res) => {
     Order.find({ user: req.user._id })
-        .populate("items.product", "_id name slug price discountPercent productPictures")
-        .populate("items.variant")
+        .populate("items.product")
         .sort({ createdAt: -1 })
         .exec((error, orders) => {
             if (error) return res.status(400).json({ error });

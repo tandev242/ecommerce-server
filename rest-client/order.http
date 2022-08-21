@@ -1,34 +1,22 @@
-# update by Admin
 POST http://localhost:5000/api/order/add
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZlNGZjNmU4OGQwYzY4NGMxOTdkNzAiLCJlbWFpbCI6InN1cGVyanVuaW9yMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDgzMzczNSwiZXhwIjoxNjYzNDI1NzM1fQ.5Y15TldFvyqQ-DWdJ4Pq_sMjZShEkcDVEbdA2njl0Xs
 
 {
-    "addressId": "3123213213",
-    "totalAmount": 250000,
+    "address": "62fa485639515f813c3213ac",
+    "totalAmount": 200330,
     "paymentStatus": "completed",
     "paymentType": "cod",
     "items": [
         {
-            "product": "658959594",
-            "size": "21312321321",
-            "price": 110000,
-            "quantity": 12
+            "product": "62fd0c088e9fa41100933116",
+            "variant": "62fd0c088e9fa41100933119",
+            "price": 200330,
+            "quantity": 1
         }
-    ],
+    ]
 }
 
-# update by User
-###################################################
-POST  http://localhost:5000/api/order/getOrderById
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZlNGZjNmU4OGQwYzY4NGMxOTdkNzAiLCJlbWFpbCI6InN1cGVyanVuaW9yMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDgzMzczNSwiZXhwIjoxNjYzNDI1NzM1fQ.5Y15TldFvyqQ-DWdJ4Pq_sMjZShEkcDVEbdA2njl0Xs
-
-{
-    "orderId": "3123213213"
-}
-
-# Delete by Admin
 ###################################################
 POST  http://localhost:5000/api/order/getOrdersByUser
 Content-Type: application/json
@@ -43,11 +31,10 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmZlNGZjNmU4OGQwYzY4NGMxOTdkNzAiLCJlbWFpbCI6InN1cGVyanVuaW9yMkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MDgzMzczNSwiZXhwIjoxNjYzNDI1NzM1fQ.5Y15TldFvyqQ-DWdJ4Pq_sMjZShEkcDVEbdA2njl0Xs
 
 {
-    "orderId": "3123213213",
-    "type": "packed" 
+    "orderId": "6301e59328acaada8c63ab56",
+    "type": "completed" 
 }
 
-# Only Admin can fetch
 ###################################################
 POST  http://localhost:5000/api/order/getAllOrders
 Content-Type: application/json

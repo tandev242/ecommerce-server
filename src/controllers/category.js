@@ -98,8 +98,8 @@ exports.updateCategories = async (req, res) => {
     if (parentId !== "") {
         category.parentId = parentId;
     }
-    await Category.findOneAndUpdate({ _id }, category, {
+    const newCategory = await Category.findOneAndUpdate({ _id }, category, {
         new: true,
     });
-    res.status(202).json({ message: 'Category updated successfully' })
+    res.status(202).json({ category: newCategory })
 };
